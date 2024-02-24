@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable,TouchableOpacity} from 'react-native';
 import {TextInput}  from 'react-native-paper';
 
-export default function Src4({navigation}) {
+export default function Src5({navigation}) {
   return (
     <View style={styles.container}>
         <View >
@@ -13,28 +13,21 @@ export default function Src4({navigation}) {
                 {/* <TextInput /> */}
                 <Text style={{color:'white'}}>Email Addres</Text>
                 <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-           <Text style={{color:'white'}}>Phone number</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Birth Date</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Gender</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
                 <Text style={{color:'white'}}>password</Text>
                 <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Confirm password</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <Text style={{color:'white',textAlign:'right'}}>
+                Forgot password?
+              </Text>
             </View>
-            <Pressable onPress={()=>navigation.navigate('Src5')}>
+            <Pressable onPress={()=>navigation.navigate('Src7')}>
             <Text style={{textAlign:'center',color:'black',backgroundColor:'#f9be02',padding:15,margin:10,marginTop:50}} >
-                Sign up
+                Sign in
             </Text>
             </Pressable>
-            <View style={{gap:10}}>
+            <View style={{gap:30}}>
+            
             <Text style={{color:'white',textAlign:'center'}}>
-                By signing up I accept terms of use and privacy policy
-            </Text>
-            <Text style={{color:'white',textAlign:'center'}}>
-                or signing up with
+                or signing in with
             </Text>
             <TouchableOpacity 
             style={{borderWidth:0.5,borderColor:'white',color:'white',marginRight:10, marginLeft:10,}}>
@@ -43,15 +36,15 @@ export default function Src4({navigation}) {
             </Text>
                 </TouchableOpacity> 
                 <TouchableOpacity 
-            style={{borderWidth:0.5,borderColor:'white',color:'white',marginRight:10, marginLeft:10,}}>
+            style={{borderWidth:0.5,borderColor:'white',color:'white',marginRight:10, marginLeft:10,marginTop:20}}>
                 <Text style={{color:'white',textAlign:'center',padding:10,}}>
                     Watch Movie
             </Text>
                 </TouchableOpacity> 
-            
-            
-            
-            <TouchableOpacity style={{backgroundColor:'#1a1a1a',marginRight:10,marginLeft:10,textAlign:'center',color:'white'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='Watch Movie' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <Text style={{textAlign:'center', color:'white'}} >
+                    Don't have an account? <Text onPress={()=>navigation.navigate('Src4')} style={{color:'#f9be02'}}>Sign up</Text> 
+                </Text>
+
             </View>
                 
          {/* <Pressable  onPress={()=>navigation.navigate('Src5')}>
