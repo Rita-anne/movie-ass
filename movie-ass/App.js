@@ -7,11 +7,9 @@ import Src2 from './Src2';
 import Src3 from './Src3';
 import Src4 from './Src4';
 import Src5 from './Src5';
-import Src6 from './Src6';
 export default function App() {
   const Stack = createNativeStackNavigator();
-  return (
- <NavigationContainer>
+  return (<NavigationContainer>
 <Stack.Navigator>
 <Stack.Screen name='Src2' component={Src2} options={{headerShown:false}}/>
 <Stack.Screen name='Src1' component={Src1} options={{headerShown:false}} />
@@ -19,8 +17,8 @@ export default function App() {
 <Stack.Screen name='Src4' component={Src4} options={{headerShown:false}}/>
 <Stack.Screen name='Src5' component={Src5} options={{headerShown:false}}/>
 </Stack.Navigator>
- </NavigationContainer> 
-//  <Src6/>
+</NavigationContainer> 
+
 //  <Src5/>
 /* <Src4/> */
     // <Src3/>
