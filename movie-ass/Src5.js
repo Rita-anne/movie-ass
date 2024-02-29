@@ -37,7 +37,7 @@ export default function Src5({navigation}) {
                 </TouchableOpacity> 
                 <TouchableOpacity 
             style={{borderWidth:0.5,borderColor:'white',color:'white',marginRight:10, marginLeft:10,marginTop:20}}>
-                <Text style={{color:'white',textAlign:'center',padding:10,}}>
+                <Text  onPress={()=>navigation.navigate('Src6')} style={{color:'white',textAlign:'center',padding:10,}}>
                     Watch Movie
             </Text>
                 </TouchableOpacity> 
