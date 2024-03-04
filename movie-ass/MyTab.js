@@ -29,7 +29,7 @@ export default function MyTab(){
                 component={MainNavigation}
                 options={{
                     tabBarIcon: ()=>
-                        <AntDesign name='home' size={25} />
+                        <AntDesign name='home' size={25} options={{ headerShown: false,}} />
                     
                 }} 
                     

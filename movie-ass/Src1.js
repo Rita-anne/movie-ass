@@ -27,10 +27,5 @@ export default function Src1({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-
-    // flex: 1,
-    //  backgroundColor:'rgba(000,000,000,0.5)',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });

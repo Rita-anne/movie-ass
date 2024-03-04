@@ -9,7 +9,7 @@ import { Icon } from 'react-native-elements';
 export default function HomeScreen({navigation}) {
 return (
     <View style={styles.container}>
-        <View style={{backgroundColor:'#001a1a'}}>
+        <View style={{backgroundColor:'blue'}}>
         <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row',justifyContent:'space-between'}} >
         <Image style={{}}source={require('./assets/movie.jpg')} />
         <Icon name='bell-outline' color='white' type='material-community'/>

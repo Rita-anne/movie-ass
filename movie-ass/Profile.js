@@ -43,7 +43,7 @@ export default function Profile({navigation}) {
         <Text style={{color:'white',padding:10,marginHorizontal:20,fontWeight:'100'}}>privacy & policy</Text>
       </View>
   </View>
-  <Pressable onPress={()=>navigation.navigate('Src')}>
+  <Pressable onPress={()=>navigation.navigate('Src2')}>
     <Text style={{textAlign:'center',color:'pink',borderWidth:0.5,borderColor:'white',padding:4,margin:10}} > Log Out </Text>
   </Pressable>
     </View>

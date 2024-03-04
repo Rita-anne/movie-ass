@@ -19,7 +19,7 @@ export default function Src5({navigation}) {
                 Forgot password?
               </Text>
             </View>
-            <Pressable onPress={()=>navigation.navigate('Src7')}>
+            <Pressable onPress={()=>navigation.navigate('Src6')}>
             <Text style={{textAlign:'center',color:'black',backgroundColor:'#f9be02',padding:15,margin:10,marginTop:50}} >
                 Sign in
             </Text>
