@@ -19,10 +19,14 @@ const Tab = createBottomTabNavigator();
 
 export default function Src6(){
     return (
-        <NavigationContainer 
-        
-        >
-            <Tab.Navigator>
+        <NavigationContainer>
+
+          <Tab.Screen name='Home' component={HomeScreen} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='home'/>  
+                }}/>
+
+             {/* <Tab.Navigator>
                 <Tab.Screen 
                 name='Home' 
                 component={HomeScreen}
@@ -31,8 +35,8 @@ export default function Src6(){
                         <AntDesign name='home' size={25} />
                     
                 }} 
-                    
-                 />
+                     
+                 /> */}
                 <Tab.Screen name='Search' component={SearchScreen} options={{
                   tabBarIcon: ()=>
                   <Icon name='search'/>  
@@ -47,7 +51,7 @@ export default function Src6(){
                 }} /> 
                
 
-            </Tab.Navigator>
+            {/* </Tab.Navigator> */}
         </NavigationContainer>
     )
 }

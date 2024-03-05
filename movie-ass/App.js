@@ -24,64 +24,65 @@ const Tab = createBottomTabNavigator();
 
 
 
-// const MainNavigation=()=>{
-//   return(
-//     <Stack.Navigator>
-// <Stack.Screen name='Src2' component={Src2} options={{headerShown:false}}/>
-// <Stack.Screen name='Src1' component={Src1} options={{headerShown:false}} />
-// <Stack.Screen name='Src3' component={Src3} options={{headerShown:false}}/>
-// <Stack.Screen name='Src4' component={Src4} options={{headerShown:false}}/>
-// <Stack.Screen name='Src5' component={Src5} options={{headerShown:false}}/>
-// <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
-// </Stack.Navigator>
-//   )
-// }
+const MainNavigation=()=>{
+  return(
+    <Stack.Navigator>
+<Stack.Screen name='Src2' component={Src2} options={{headerShown:false}}/>
+<Stack.Screen name='Src1' component={Src1} options={{headerShown:false}} />
+<Stack.Screen name='Src3' component={Src3} options={{headerShown:false}}/>
+<Stack.Screen name='Src4' component={Src4} options={{headerShown:false}}/>
+<Stack.Screen name='Src5' component={Src5} options={{headerShown:false}}/>
+<Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
+<Stack.Screen name='Action' component={Action} options={{headerShown:false}}/>
+</Stack.Navigator>
+  )
+}
 
-// const TabNavigation=()=>{
-//   return (
+const TabNavigation=()=>{
+  return (
       
         
         
-//             <Tab.Navigator>
-//                 <Tab.Screen 
-//                 name='Home'
-//                 component={HomeScreen}
-//                 options={{
-//                     tabBarIcon: ()=>
-//                         <AntDesign name='home' size={25} />
+            <Tab.Navigator>
+                <Tab.Screen 
+                name='Home'
+                component={HomeScreen}
+                options={{
+                    tabBarIcon: ()=>
+                        <AntDesign name='home' size={25} />
                     
-//                 }} 
+                }} 
                     
-//                  />
-//                 <Tab.Screen name='Search' component={SearchScreen} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='search'/>  
-//                 }}/>
-//                 <Tab.Screen name='Profile' component={ProfileScreen} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='person'/>    
-//                 }} />
-//                 <Tab.Screen name='MyList' component={MyList} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='folder'/>    
-//                 }} /> 
+                 />
+                <Tab.Screen name='Search' component={SearchScreen} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='search'/>  
+                }}/>
+                <Tab.Screen name='Profile' component={ProfileScreen} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='person'/>    
+                }} />
+                <Tab.Screen name='MyList' component={MyList} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='folder'/>    
+                }} /> 
                
 
-//             </Tab.Navigator>
+            </Tab.Navigator>
        
-//     )
-// }
+    )
+}
 
 export default function App() {
-  return (
-/* <NavigationContainer>
+return (
+<NavigationContainer>
 <MainNavigation/>
-</NavigationContainer>  */
-/* <MyTab/> */
-/* <Src6/>  */
-<Action/>
+</NavigationContainer> 
+/* <MyTab/>  */
+/* <Src6/>   */
+/* <Action/> */
 //  <Src5/>
-/* <Src4/> */
+/* <Src4/>  */
     // <Src3/>
 /* <Src2/> */
     // <Src1/>
@@ -89,8 +90,8 @@ export default function App() {
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style="auto" />
     // </View>
-  );
-}
+ );
+ }
 
 // const styles = StyleSheet.create({
 //   container: {

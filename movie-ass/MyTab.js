@@ -24,16 +24,24 @@ export default function MyTab(){
         
         
             <Tab.Navigator>
-                <Tab.Screen 
+              <Tab.Screen name='search' component={HomeScreen} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='search'/>  
+                }}/>
+
+
+
+                {/* <Tab.Screen 
+        
                 name='Home'
-                component={MainNavigation}
+                component={HomeScreen}
                 options={{
                     tabBarIcon: ()=>
                         <AntDesign name='home' size={25} options={{ headerShown: false,}} />
                     
                 }} 
                     
-                 />
+                 /> */}
                 <Tab.Screen name='Search' component={SearchScreen} options={{ headerShown: false,
                   tabBarIcon: ()=>
                   <Icon name='search'/>  

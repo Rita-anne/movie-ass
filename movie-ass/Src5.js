@@ -12,9 +12,9 @@ export default function Src5({navigation}) {
             <View style={{margin:10,gap:5,top:35}}>
                 {/* <TextInput /> */}
                 <Text style={{color:'white'}}>Email Addres</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='email-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
                 <Text style={{color:'white'}}>password</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='lock-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
                 <Text style={{color:'white',textAlign:'right'}}>
                 Forgot password?
               </Text>

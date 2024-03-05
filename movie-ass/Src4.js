@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable,TouchableOpacity} from 'react-native';
 import {TextInput}  from 'react-native-paper';
+import { Icon } from 'react-native-elements';
 
 export default function Src4({navigation}) {
   return (
@@ -12,17 +13,17 @@ export default function Src4({navigation}) {
             <View style={{margin:10,gap:5,top:35}}>
                 {/* <TextInput /> */}
                 <Text style={{color:'white'}}>Email Addres</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-           <Text style={{color:'white'}}>Phone number</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Birth Date</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Gender</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>password</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
-                <Text style={{color:'white'}}>Confirm password</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} label='' mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='email-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com'   theme={{colors:{background:'transparent'}}} />
+                   <Text style={{color:'white'}}>Phone number</Text>
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='phone' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} />
+                   <Text style={{color:'white'}}>Birth Date</Text>
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='calendar-blank-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} />
+                   <Text style={{color:'white'}}>Gender</Text>
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='account-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}}  />
+                   <Text style={{color:'white'}}>password</Text>
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='lock-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} />
+                   <Text style={{color:'white'}}>Confirm password</Text>
+                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='lock-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}}  />
             </View>
             <Pressable onPress={()=>navigation.navigate('Src5')}>
             <Text style={{textAlign:'center',color:'black',backgroundColor:'#f9be02',padding:15,margin:10,marginTop:50}} >
@@ -73,3 +74,9 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
 });
+
+
+//  leftIcon={
+//           <Icon name='user' type='font-awesome' size={24} color='black'
+//           />
+//  }

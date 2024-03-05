@@ -9,16 +9,17 @@ export default function SearchScreen({navigation}) {
   return (
     <View style={styles.container} >
       <View>
-      <View >
-         <TextInput right={<TextInput.Icon icon="magnify" color="#f9be02"/>} label=''  mode='outlined' underlineColor='#f9be02' placeholder='Search Movie Title' theme={{colors:{background:'transparent'}}}  />
+      <View style={{paddingTop:30}}>
+         <TextInput right={<TextInput.Icon icon="magnify" color="#f9be02"/>} label=''  mode='outlined' underlineColor='#f9be02' placeholder='Search Movie Title' textColor='white' theme={{colors:{background:'transparent'}}}  />
       </View>
-  
+  <View>
     <ScrollView horizontal={true}>
       <Text style={{color:'white',marginHorizontal:30,marginTop:10,color:'#f9be02'}} >All Results</Text>
        <Text style={{color:'white',marginHorizontal:30,marginTop:10}} >Series</Text>
         <Text style={{color:'white',marginHorizontal:30,marginTop:10}} >Films</Text>
          <Text style={{color:'white',marginHorizontal:30,marginTop:10}} >Originals</Text>
     </ScrollView>
+    </View>
         <View >
         <Image style={{marginHorizontal:135,marginTop:150}}source={require('./assets/search.png')} />
     <View style={{}}>

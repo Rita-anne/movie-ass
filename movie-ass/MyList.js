@@ -23,8 +23,9 @@ export default function MyList({navigation}) {
       </View>
     <ScrollView>
       <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
+        <Pressable  onPress={()=>navigation.navigate('Action')}>
         <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie1.jpg')} />
-       
+        </Pressable>
         <View>
         <Text style={{color:'white'}}>
          Itawewon Class
@@ -40,7 +41,9 @@ export default function MyList({navigation}) {
         </Text>
         </View>
        <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
+        <Pressable  onPress={()=>navigation.navigate('Action')}>
         <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie2.jpg')} />
+        </Pressable>
         <View>
         <Text style={{color:'white'}}>
          Itawewon Class
@@ -57,7 +60,9 @@ export default function MyList({navigation}) {
       </View>
        </View>
        <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
+        <Pressable  onPress={()=>navigation.navigate('Action')}>
         <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie3.jpg')} />
+        </Pressable>
          <View>
          <Text style={{color:'white'}}>
          Itawewon Class
@@ -75,7 +80,9 @@ export default function MyList({navigation}) {
       </View>
       </View>
        <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
+        <Pressable  onPress={()=>navigation.navigate('Action')}>
         <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie4.jpg')} />
+         </Pressable>
          <View>
          <Text style={{color:'white'}}>
          Itawewon Class
