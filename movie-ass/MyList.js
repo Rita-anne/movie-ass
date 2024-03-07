@@ -1,14 +1,33 @@
 import { View, Text,Button, ScrollView, StyleSheet,Image, Pressable } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar';
+import List from './Mylist';
 
 export default function MyList({navigation}) {
+
+  const[movie,setmovie]=useState([])
+  const options={
+    method:'GET',
+    headers:{
+     accept:'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYWIxMDBmMzY0MGM1ZDU2NDkzOTgyYjU0YmU4ZjdmOCIsInN1YiI6IjY1ZDg2ZDg2YTI4NGViMDE4NTg3ZmEyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bBG1lo4fPNahfs-ewwWV-hmmBAir7MBeqH62yweqAGo'
+    }
+
+  };
+  useEffect(()=>{
+fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+  .then(response => response.json())
+  .then((response)=> {
+    setmovie(response.results)
+    console.log(response.results)
+  })
+  .catch(err => console.error(err));
+  },[])
+
+
   return (
   
 <View style={styles.container}>
-  <View>
-      <Text onPress={()=>{navigation.navigate('Profile')}} ></Text>
-    </View>
         <View >
         <Image style={{marginHorizontal:10}}source={require('./assets/movie.jpg')} />
         
@@ -22,83 +41,11 @@ export default function MyList({navigation}) {
          </ScrollView>
       </View>
     <ScrollView>
-      <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
-        <Pressable  onPress={()=>navigation.navigate('Action')}>
-        <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie1.jpg')} />
-        </Pressable>
-        <View>
-        <Text style={{color:'white'}}>
-         Itawewon Class
-        </Text>
-        <Text style={{color:'white'}}>
-         2020
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Dram, Asian,Comedy
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Series
-        </Text>
-        </View>
-       <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
-        <Pressable  onPress={()=>navigation.navigate('Action')}>
-        <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie2.jpg')} />
-        </Pressable>
-        <View>
-        <Text style={{color:'white'}}>
-         Itawewon Class
-        </Text>
-        <Text style={{color:'white'}}>
-         2020
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Dram, Asian,Comedy
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Series
-        </Text>
-      </View>
-       </View>
-       <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
-        <Pressable  onPress={()=>navigation.navigate('Action')}>
-        <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie3.jpg')} />
-        </Pressable>
-         <View>
-         <Text style={{color:'white'}}>
-         Itawewon Class
-        </Text>
-        <Text style={{color:'white'}}>
-         2020
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Dram, Asian,Comedy
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Series
-        </Text>    
-      </View>
-      </View>
-      </View>
-       <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
-        <Pressable  onPress={()=>navigation.navigate('Action')}>
-        <Image style={{width:200,height:100,margin:10}}source={require('./assets/movie4.jpg')} />
-         </Pressable>
-         <View>
-         <Text style={{color:'white'}}>
-         Itawewon Class
-        </Text>
-        <Text style={{color:'white'}}>
-         2020
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Dram, Asian,Comedy
-        </Text>
-        <Text style={{color:'white',fontWeight:'100'}}>
-          Series
-        </Text>
-       </View>
-       </View>
-     </ScrollView> 
+      {movie.map((item)=>
+      <List movies={item.poster_path} key1={item.original_title} key2={item.popularity}   key3={item.release_date} />
+       )}
+    
+    </ScrollView>
       <StatusBar style="auto" />
       
     </View>
@@ -111,7 +58,6 @@ const styles = StyleSheet.create({
 
     flex: 1,
      backgroundColor:'#1a1a1a',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+   
   },
 });

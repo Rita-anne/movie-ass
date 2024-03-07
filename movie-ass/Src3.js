@@ -12,7 +12,7 @@ export default function Src3({navigation}) {
         <Pressable onPress={()=>navigation.navigate('Src6')} >
         <Text style={{top:380,textAlign:'center',backgroundColor:'#f9be02',margin:15,padding:5}} > Watch Movie </Text>
        </Pressable>
-        <Pressable onPress={()=>navigation.navigate('Src5')}>
+        <Pressable onPress={()=>navigation.navigate('Signin')}>
         <Text style={{top:390,textAlign:'center',color:'white',margin:10}}>Sign in</Text>
         </Pressable>
       <StatusBar style="auto" />
@@ -26,8 +26,7 @@ const styles = StyleSheet.create({
 
     flex: 1,
      backgroundColor:'#1a1a1a',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+   
   },
 });
 

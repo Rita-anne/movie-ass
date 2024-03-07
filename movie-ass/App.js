@@ -10,7 +10,8 @@ import Src2 from './Src2';
 import Src3 from './Src3';
 import Src4 from './Src4';
 import Action from './Action'
-import Src5 from './Src5';
+// import Signin from './Src5';
+import Signin from './Signin';
 import Src6 from './Src6';
 import MyTab from './MyTab';
 import HomeScreen from './Home';
@@ -31,7 +32,7 @@ const MainNavigation=()=>{
 <Stack.Screen name='Src1' component={Src1} options={{headerShown:false}} />
 <Stack.Screen name='Src3' component={Src3} options={{headerShown:false}}/>
 <Stack.Screen name='Src4' component={Src4} options={{headerShown:false}}/>
-<Stack.Screen name='Src5' component={Src5} options={{headerShown:false}}/>
+<Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/>
 <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
 <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/>
 </Stack.Navigator>

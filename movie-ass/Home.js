@@ -8,6 +8,8 @@ import { Icon } from 'react-native-elements';
    
 export default function HomeScreen({navigation}) {
 const[movie,setmovie]=useState([])
+const [movie2,setmovie2]=useState([])
+const [movie3,setmovie3]=useState([])
 const options = {
   method: 'GET',
   headers: {
@@ -22,7 +24,26 @@ useEffect(()=>{
     setmovie(response.results)
     console.log(response.results)
   } )
+  
     
+  .catch(err => console.error(err));
+},[])
+
+useEffect(()=>{
+  fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
+  .then(response => response.json())
+  .then((response)=>{
+    setmovie2(response.results)
+    console.log(response.results)})
+  .catch(err => console.error(err));
+},[])
+
+useEffect(()=>{
+fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', options)
+  .then(response => response.json())
+  .then((response) =>{
+    setmovie3(response.results)
+   console.log(response.results)})
   .catch(err => console.error(err));
 },[])
 
@@ -80,16 +101,6 @@ return (
                     {movie.map((item) =>
                         <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
                    ) }
-                
-                   <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie2.jpg')} />
-                    </Pressable>
-                   <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie3.jpg')} />
-                   </Pressable>
-                   <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie4.jpg')} />
-                   </Pressable>
             </ScrollView>
 
              <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row',justifyContent:'space-between',marginTop:15}}>
@@ -98,33 +109,18 @@ return (
             </View>
             
             <ScrollView horizontal={true}>
-                  <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie6.jpg')} />
-                  </Pressable>
-                  <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie8.jpg')} />
-                  </Pressable>
-                  <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie3.jpg')} />
-                  </Pressable>
-                  <Pressable  onPress={()=>navigation.navigate('Action')}>
-                <Image style={{width:250,height:150,marginHorizontal:5,borderRadius:10}}source={require('./assets/movie4.jpg')} />
-                 </Pressable>
+                  {movie2.map((item) =>
+                   <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
+                   )}
             </ScrollView>
             <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row',justifyContent:'space-between',marginTop:15}}>
              <Text style={{color:'white',fontSize:20,fontWeight:'500',}}> Made For You</Text>
              <Text style={{color:'white',fontSize:20,fontWeight:'100',}}> View More</Text>
             </View>
             <ScrollView>
-            <Pressable  onPress={()=>navigation.navigate('Action')}>
-           <Image style={{width:400,height:200,margin:5,borderRadius:10}}source={require('./assets/movie4.jpg')} />
-            </Pressable>
-           <Pressable  onPress={()=>navigation.navigate('Action')}>
-           <Image style={{width:400,height:200,margin:5,borderRadius:10}}source={require('./assets/movie3.jpg')} />
-           </Pressable>
-           <Pressable  onPress={()=>navigation.navigate('Action')}>
-           <Image style={{width:400,height:200,margin:5,borderRadius:10}}source={require('./assets/movie8.jpg')} />
-             </Pressable>
+            {movie3.map((item) =>
+                   <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
+                   )}
             </ScrollView>
         </ScrollView>
       </View>
@@ -134,21 +130,10 @@ return (
 
 const styles = StyleSheet.create({
   container: {
-
-    // flex: 1,
      backgroundColor:'#1a1a1a',
      height:'100%'
-     
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });
 
       
 
-
-  
-
-// const styles = StyleSheet.create({})
-
-// export default HomeScreen;

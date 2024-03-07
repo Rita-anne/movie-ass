@@ -2,15 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable,TouchableOpacity} from 'react-native';
 import {TextInput}  from 'react-native-paper';
 
-export default function Src5({navigation}) {
+export default function Signin({navigation}) {
+
   return (
     <View style={styles.container}>
         <View >
-            {/* <Text style={{color:'black',margin:10,padding:30}}>
-                Sign in
-            </Text> */}
             <View style={{margin:10,gap:5,top:35}}>
-                {/* <TextInput /> */}
                 <Text style={{color:'white'}}>Email Addres</Text>
                 <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='email-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
                 <Text style={{color:'white'}}>password</Text>
@@ -46,11 +43,6 @@ export default function Src5({navigation}) {
                 </Text>
 
             </View>
-                
-         {/* <Pressable  onPress={()=>navigation.navigate('Src5')}>
-        <Image style={{top:350,left:150}}source={require('./assets/movie.jpg')} />
-        </Pressable>
-        <Text>HELOO</Text> */}
       <StatusBar style="auto" />
       </View>
     </View>
@@ -62,7 +54,5 @@ const styles = StyleSheet.create({
 
     flex: 1,
      backgroundColor:'#1a1a1a',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });
