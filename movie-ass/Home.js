@@ -96,32 +96,35 @@ return (
              <Text style={{color:'white',fontSize:20,fontWeight:'500',}}> New Release</Text>
              <Text style={{color:'white',fontSize:20,fontWeight:'100',}}> View More</Text>
             </View>
-            
+            <Pressable onPress={()=>navigation.navigate('Action')} >
             <ScrollView horizontal={true}>
                     {movie.map((item) =>
                         <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
                    ) }
             </ScrollView>
-
+            </Pressable>
              <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row',justifyContent:'space-between',marginTop:15}}>
              <Text style={{color:'white',fontSize:20,fontWeight:'500',}}> Made For You</Text>
              <Text style={{color:'white',fontSize:20,fontWeight:'100',}}> View More</Text>
             </View>
-            
+            <Pressable onPress={()=>navigation.navigate('Action')} >
             <ScrollView horizontal={true}>
                   {movie2.map((item) =>
                    <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
                    )}
             </ScrollView>
+            </Pressable>
             <View style={{display:'flex',flexWrap:'wrap',flexDirection:'row',justifyContent:'space-between',marginTop:15}}>
              <Text style={{color:'white',fontSize:20,fontWeight:'500',}}> Made For You</Text>
              <Text style={{color:'white',fontSize:20,fontWeight:'100',}}> View More</Text>
             </View>
+            <Pressable onPress={()=>navigation.navigate('Action')} >
             <ScrollView>
             {movie3.map((item) =>
                    <Image key={item.id} style={{width:250,height:150,marginHorizontal:5,borderRadius:10}} source={{uri:`https://image.tmdb.org/t/p/w500/${item.poster_path}`}} />
                    )}
             </ScrollView>
+            </Pressable>
         </ScrollView>
       </View>
       </View>

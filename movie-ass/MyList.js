@@ -1,7 +1,7 @@
 import { View, Text,Button, ScrollView, StyleSheet,Image, Pressable } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar';
-import List from './Mylist';
+import List from './Mylistcomp';
 
 export default function MyList({navigation}) {
 

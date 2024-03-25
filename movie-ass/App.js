@@ -76,12 +76,12 @@ const TabNavigation=()=>{
 
 export default function App() {
 return (
-<NavigationContainer>
+ <NavigationContainer>
 <MainNavigation/>
 </NavigationContainer> 
 /* <MyTab/>  */
 /* <Src6/>   */
-/* <Action/> */
+/* <Action/>  */
 //  <Src5/>
 /* <Src4/>  */
     // <Src3/>
