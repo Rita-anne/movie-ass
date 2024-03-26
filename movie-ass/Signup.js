@@ -3,7 +3,7 @@ import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable,TouchableOp
 import {TextInput}  from 'react-native-paper';
 import { Icon } from 'react-native-elements';
 
-export default function Src4({navigation}) {
+export default function Signup({navigation}) {
   return (
     <View style={styles.container}>
         <View >

@@ -39,7 +39,7 @@ export default function Signin({navigation}) {
             </Text>
                 </TouchableOpacity> 
                 <Text style={{textAlign:'center', color:'white'}} >
-                    Don't have an account? <Text onPress={()=>navigation.navigate('Src4')} style={{color:'#f9be02'}}>Sign up</Text> 
+                    Don't have an account? <Text onPress={()=>navigation.navigate('Signup')} style={{color:'#f9be02'}}>Sign up</Text> 
                 </Text>
 
             </View>

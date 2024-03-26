@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable } from 'react-native';
 
-export default function Src2({navigation}) {
+export default function Muvi({navigation}) {
   return (
     <View style={styles.container}>
         <View >

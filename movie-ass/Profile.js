@@ -3,14 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Icon } from 'react-native-elements';
 
+
 export default function Profile({navigation}) {
   return (
  <View style={styles.container}>
    <View>
       <Text onPress={()=>navigation.navigate('Home')} ></Text>
-    </View>
-    <View >
-          <Text style={{fontWeight:'600',fontSize:30,color:'white',margin:10}}>More</Text>
     </View>
     <View style={{paddingTop:50}}> 
         <Image style={{width:180,height:180,borderRadius:80,marginHorizontal:120,}}source={require('./assets/me.jpg')} />

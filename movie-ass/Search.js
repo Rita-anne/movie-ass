@@ -62,21 +62,9 @@ export default function SearchScreen({navigation}) {
          <Text style={{color:'white',marginHorizontal:30,marginTop:10}} >Originals</Text>
     </ScrollView>
     </View>
-        {/* <View >
-        <Image style={{marginHorizontal:135,marginTop:150}}source={require('./assets/search.png')} />
-    <View style={{}}>
-    <Text style={{color:'white',textAlign:'center',fontWeight:'500',fontSize:15,padding:5}}> Search Your Movie</Text>
-    <Text  style={{color:'white',textAlign:'center',fontWeight:'200',fontSize:15,padding:5}}> Search Movie,Series,Originals of your choice</Text>
-    </View>
-      <StatusBar style="auto" />
-      </View> */}
   </View>
 
 <ScrollView>
-{/* {search.map((item)=>
-      <Search movies={item.poster_path} key1={item.original_title} key2={item.popularity}   key3={item.release_date} />
-       )} */}
-
        <FlatList 
        data={search}
        renderItem={({item})=>
