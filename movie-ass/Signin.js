@@ -1,26 +1,113 @@
 import { StatusBar } from 'expo-status-bar';
+// import { AsyncStorage } from 'react-native';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import { useState } from 'react';
 import { Button, ScrollView, StyleSheet, Text, View,Image, Pressable,TouchableOpacity} from 'react-native';
 import {TextInput}  from 'react-native-paper';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Signin({navigation}) {
+  
+   const [email, setEmail] = useState('');
+   const [password, setPassword] = useState('');
+   const [emailError, setEmailError] = useState('');
+   const [passwordError, setPasswordError] = useState('');
+   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
+
+   const validateForm = () => {
+    let valid = true
+    if (!email.trim()){
+      setEmailError('Email is requied')
+      valid = false
+    } else if (!isValidEmail(email)){
+      setEmailError('Invalid email format')
+      valid = false
+    } else {
+      setEmailError('')
+    }
+    if(!password.trim()){
+      setPasswordError('Password is required')
+      valid = false
+    }else{
+      setPasswordError('')
+    }
+   };
+
+   const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+   };
+
+
+const handleSubmit = async () => {
+  if (validateForm()) {
+    console.log('Submitted:', email, password);
+    try {
+      await AsyncStorage.setItem('data', 'name');
+      console.log('Data stored successfully.');
+    } catch (error) {
+      console.error('Error storing data:', error);
+    }
+  }
+};
+
+//    const handleSubmit = async () => {
+//   if (validateForm()) {
+//     console.log('Submitted:', email, password)
+//       await AsyncStorage.setItem('data','name')
+//   }
+// }
+   
+   
+  
 
   return (
     <View style={styles.container}>
         <View >
             <View style={{margin:10,gap:5,top:35}}>
                 <Text style={{color:'white'}}>Email Addres</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='email-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+
+                <TextInput style={{backgroundColor:'#1a1a1a'}} 
+                left={<TextInput.Icon icon='email-outline' type='material-community' size={20}/>}
+                mode='outlined' 
+                underlineColor='#1a1a1a'
+                placeholder='Your email'
+                theme={{colors:{background:'transparent'}}} 
+                textColor='white'
+                onChangeText={setEmail}
+                error={!!emailError}
+                value={email}
+                    />
+               {emailError ? <Text style={styles.error}>{emailError}</Text> : null}
+
                 <Text style={{color:'white'}}>password</Text>
-                <TextInput style={{backgroundColor:'#1a1a1a'}} left={<TextInput.Icon icon='lock-outline' type='material-community' size={20}/>} mode='outlined' underlineColor='#1a1a1a' placeholder='e.g johndoe@mail.com' theme={{colors:{background:'transparent'}}} textColor='green' />
+                <TextInput 
+                style={{backgroundColor:'#1a1a1a'}} 
+                secureTextEntry={isPasswordSecure}
+                left={<TextInput.Icon icon='lock-outline' type='material-community' size={20}/>}
+                right={<TextInput.Icon icon={isPasswordSecure ?'eye-off' : 'eye'} onPress={() => setIsPasswordSecure(!isPasswordSecure) } type='material-community' size={20}/>}
+                mode='outlined'
+                underlineColor='#1a1a1a'
+                placeholder='Password'
+                theme={{colors:{background:'transparent'}}}
+                textColor='white'
+                onChangeText={setPassword}
+                error={!!passwordError}
+                value={password}
+                 />
+                 {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
+
+
                 <Text style={{color:'white',textAlign:'right'}}>
                 Forgot password?
               </Text>
             </View>
-            <Pressable onPress={()=>navigation.navigate('Src6')}>
+            <TouchableOpacity onPress={handleSubmit}>
             <Text style={{textAlign:'center',color:'black',backgroundColor:'#f9be02',padding:15,margin:10,marginTop:50}} >
                 Sign in
             </Text>
-            </Pressable>
+            </TouchableOpacity>
             <View style={{gap:30}}>
             
             <Text style={{color:'white',textAlign:'center'}}>
@@ -54,5 +141,10 @@ const styles = StyleSheet.create({
 
     flex: 1,
      backgroundColor:'#1a1a1a',
+  },
+    error: {
+    color: 'red',
+    fontSize: 14,
+    marginTop: 5
   },
 });

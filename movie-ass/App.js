@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-import Src1 from './Src1';
+import Joker from './Joker';
 import Muvi from './Muvi';
 import Welcome from './Welcome';
 import Signup from './Signup';
@@ -29,10 +29,10 @@ const Tab = createBottomTabNavigator();
 // const MainNavigation=()=>{
 //   return(
 //     <Stack.Navigator>
-// <Stack.Screen name='Src2' component={Src2} options={{headerShown:false}}/>
-// <Stack.Screen name='Src1' component={Src1} options={{headerShown:false}} />
-// <Stack.Screen name='Src3' component={Src3} options={{headerShown:false}}/>
-// <Stack.Screen name='Src4' component={Src4} options={{headerShown:false}}/>
+// <Stack.Screen name='Muvi' component={Muvi} options={{headerShown:false}}/>
+// <Stack.Screen name='Joker' component={Joker} options={{headerShown:false}} />
+// <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
+// <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
 // <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/>
 // <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
 // <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/>
@@ -83,12 +83,13 @@ return (
 // </NavigationContainer> 
 /* <MyTab/>  */
 /* <Src6/>   */
-/* <Action/>  */
+/* <Action/>   */
 //  <Src5/>
-/* <Signup/> */
+/* <Signin/> */
+<Signup/>  
     // <Welcome/>
-<Muvi/>
-    // <Src1/>
+/* <Muvi/>  */
+    // <Joker/>
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style="auto" />

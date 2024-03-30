@@ -5,7 +5,7 @@ export default function Muvi({navigation}) {
   return (
     <View style={styles.container}>
         <View >
-        <Pressable  onPress={()=>navigation.navigate('Src1')}>
+        <Pressable  onPress={()=>navigation.navigate('Joker')}>
         <Image style={{top:350,left:150}}source={require('./assets/movie.jpg')} />
         </Pressable>
       <StatusBar style="auto" />
