@@ -9,7 +9,7 @@ export default function Save() {
       <Text style={{marginLeft:25,fontWeight:'700',color:'#607D8B'}}>Things you do to enjoy your existence on earth: </Text>
       <Text style={{marginLeft:25,fontWeight:'400',color:'#455A64'}}>Select at least top 2 of your fav's</Text>
     </View>
-     <View style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>
+     <Pressable style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>
         <Button style={{borderWidth:1,borderColor:'#00BCD4',borderRadius:8,}}>
             <Text style={{color:'#607D8B',}}>Travelling</Text>
         </Button>
@@ -19,8 +19,8 @@ export default function Save() {
         <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Photography</Text>
         </Button>
-     </View>    
-     <View style={{display:'flex',marginTop:8, flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>    
+     </Pressable>    
+     <Pressable style={{display:'flex',marginTop:8, flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>    
         <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Gaming</Text>
         </Button>
@@ -30,8 +30,8 @@ export default function Save() {
          <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Cooking</Text>
         </Button>
-      </View>
-      <View style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row',}}>
+      </Pressable>
+      <Pressable style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row',}}>
          <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B',}}>Blogging</Text>
         </Button >
@@ -41,12 +41,12 @@ export default function Save() {
          <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Origami</Text>
         </Button>
-       </View>
+       </Pressable>
          <View style={{marginTop:10}}>
          <Text style={{marginLeft:25,fontWeight:'700',color:'#607D8B'}}>Boring subjects that you find quite interesting: </Text>
          <Text style={{marginLeft:25,fontWeight:'400',color:'#455A64'}}>Select at least top 2 of your fav's</Text>
          </View>
-     <View style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>
+     <Pressable style={{display:'flex',marginTop:10,flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>
         <Button style={{borderWidth:1,borderColor:'#00BCD4',borderRadius:8,}}>
             <Text style={{color:'#607D8B',}}>Economics</Text>
         </Button>
@@ -56,8 +56,8 @@ export default function Save() {
         <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Accounting</Text>
         </Button>
-     </View>    
-     <View style={{display:'flex',marginTop:10, flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>    
+     </Pressable>    
+     <Pressable style={{display:'flex',marginTop:10, flexWrap:'wrap',justifyContent:'space-around',flexDirection:'row'}}>    
         <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>English</Text>
         </Button>
@@ -67,7 +67,7 @@ export default function Save() {
          <Button style={{borderWidth:1,borderColor:'#00BCD4', borderRadius:8,}}>
             <Text style={{color:'#607D8B'}}>Math's</Text>
         </Button>
-      </View> 
+      </Pressable> 
       <Pressable>
         <Button style={{backgroundColor:'#00838F',borderRadius:8,margin:10,marginTop:50}}>
             <Text style={{color:'white',fontSize:20}}>Save</Text>
