@@ -30,70 +30,75 @@ const Tab = createBottomTabNavigator();
 
 
 
-// const MainNavigation=()=>{
-//   return(
-//     <Stack.Navigator>
-// <Stack.Screen name='Muvi' component={Muvi} options={{headerShown:false}}/>
-// <Stack.Screen name='Joker' component={Joker} options={{headerShown:false}} />
-// <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
-// <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
-// <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/>
-// <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
-// <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/>
-// </Stack.Navigator>
-//   )
-// }
+const MainNavigation=()=>{
+  return(
+    <Stack.Navigator>
+{/* <Stack.Screen name='Muvi' component={Muvi} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Joker' component={Joker} options={{headerShown:false}} /> */}
+{/* <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/> */}
+<Stack.Screen name='Beforegoingforward' component={Beforegoingforward} options={{headerShown:false}}/>
+<Stack.Screen name='Highesteducation' component={Highesteducation} options={{headerShown:false}}/>
+<Stack.Screen name='Save' component={Save} options={{headerShown:false}}/>
+<Stack.Screen name='Getstarted' component={Getstarted} options={{headerShown:false}}/>
 
-// const TabNavigation=()=>{
-//   return (
+</Stack.Navigator>
+  )
+}
+
+const TabNavigation=()=>{
+  return (
       
         
         
-//             <Tab.Navigator>
-//                 <Tab.Screen 
-//                 name='Home'
-//                 component={HomeScreen}
-//                 options={{
-//                   headerShown: false,
-//                     tabBarIcon: ()=>
-//                         <AntDesign name='home' size={25} />
+            <Tab.Navigator>
+                <Tab.Screen 
+                name='Home'
+                component={HomeScreen}
+                options={{
+                  headerShown: false,
+                    tabBarIcon: ()=>
+                        <AntDesign name='home' size={25} />
                     
-//                 }} 
+                }} 
                     
-//                  />
-//                 <Tab.Screen name='Search' component={SearchScreen} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='search'/>  
-//                 }}/>
-//                 <Tab.Screen name='Profile' component={Nav} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='person'/>    
-//                 }} />
-//                 <Tab.Screen name='MyList' component={MyList} options={{ headerShown: false,
-//                   tabBarIcon: ()=>
-//                   <Icon name='folder'/>    
-//                 }} /> 
+                 />
+                <Tab.Screen name='Search' component={SearchScreen} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='search'/>  
+                }}/>
+                <Tab.Screen name='Profile' component={Nav} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='person'/>    
+                }} />
+                <Tab.Screen name='MyList' component={MyList} options={{ headerShown: false,
+                  tabBarIcon: ()=>
+                  <Icon name='folder'/>    
+                }} /> 
                
 
-//             </Tab.Navigator>
+            </Tab.Navigator>
        
-//     )
-// }
+    )
+}
 
 export default function App() {
 return (
-//  <NavigationContainer>
-// <MainNavigation/>
-// </NavigationContainer> 
+ <NavigationContainer>
+<MainNavigation/>
+</NavigationContainer> 
 /* <MyTab/>  */
 /* <Src6/>   */
 /* <Action/>   */
 //  <Src5/>
 /* <Signin/>  */
 /* <Beforegoingforward/> */
-//  <Highesteducation/>  
-/* <Save/> */
-<Getstarted/>
+/* <Highesteducation/>  */
+/* <Save/>  */
+/* <Getstarted/>  */
 /* <Signup/>   */
     // <Welcome/>
 /* <Muvi/>  */
