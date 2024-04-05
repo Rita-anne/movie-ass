@@ -21,6 +21,8 @@ import ProfileScreen from './Profile';
 import { Icon } from 'react-native-elements';
 import Nav from './DrawerNavigation';
 import Beforegoingforward from './Beforegoingforward';
+import Highesteducation from './Highesteducation';
+import Save from './Save';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -87,7 +89,9 @@ return (
 /* <Action/>   */
 //  <Src5/>
 /* <Signin/>  */
-<Beforegoingforward/>
+/* <Beforegoingforward/> */
+//  <Highesteducation/>  
+<Save/>
 /* <Signup/>   */
     // <Welcome/>
 /* <Muvi/>  */
