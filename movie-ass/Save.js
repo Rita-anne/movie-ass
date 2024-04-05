@@ -73,11 +73,7 @@ export default function Save() {
             <Text style={{color:'white',fontSize:20}}>Save</Text>
         </Button>
       </Pressable>
-      {/* <Pressable>
-        <Button style={{backgroundColor:'#00838F',borderRadius:8,marginTop:230,padding:8}}>
-            <Text style={{color:'white',fontSize:20}}>Next</Text>
-        </Button>
-      </Pressable> */}
+     
 
 </View>   
   )

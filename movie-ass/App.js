@@ -23,6 +23,7 @@ import Nav from './DrawerNavigation';
 import Beforegoingforward from './Beforegoingforward';
 import Highesteducation from './Highesteducation';
 import Save from './Save';
+import Getstarted from './Getstarted';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -91,7 +92,8 @@ return (
 /* <Signin/>  */
 /* <Beforegoingforward/> */
 //  <Highesteducation/>  
-<Save/>
+/* <Save/> */
+<Getstarted/>
 /* <Signup/>   */
     // <Welcome/>
 /* <Muvi/>  */
