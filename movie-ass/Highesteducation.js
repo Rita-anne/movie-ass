@@ -4,7 +4,7 @@ import { SelectList } from 'react-native-dropdown-select-list'
 import { Button } from 'react-native-paper'
 import React from 'react'
 
-export default function Highesteducation() {
+export default function Highesteducation({navigation}) {
    
     const [selected,setSelected] = React.useState("");
     const data = [
@@ -20,11 +20,12 @@ export default function Highesteducation() {
       <Text style={{marginTop:250,fontWeight:'600',fontSize:20}}>Highest Education:</Text>
       <SelectList data={data} 
       setSelected={setSelected}
+      
       boxStyles={{backgroundColor:'white',marginTop:10,borderRadius:8,borderWidth:1}}
       search={false}
     />
     <Pressable>
-        <Button style={{backgroundColor:'#00838F',borderRadius:8,marginTop:230,padding:8}}>
+        <Button onPress={()=>navigation.navigate('Save')} style={{backgroundColor:'#9633AA',borderRadius:8,marginTop:230,padding:8}}>
             <Text style={{color:'white',fontSize:20}}>Next</Text>
         </Button>
     </Pressable>

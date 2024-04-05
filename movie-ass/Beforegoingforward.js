@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
 import { Button, TextInput } from 'react-native-paper'
-export default function Beforegoingforward() {
+export default function Beforegoingforward({navigation}) {
   return (
   <View>
     <View style={{marginTop:120}}>
@@ -41,7 +41,7 @@ export default function Beforegoingforward() {
     </View>
 
     <Pressable>
-      <Button style={{backgroundColor:'#00838F',borderRadius:8,margin:10,padding:8,marginTop:50}}>
+      <Button onPress={()=>navigation.navigate('Highesteducation')} style={{backgroundColor:'#9633AA',borderRadius:8,margin:10,padding:8,marginTop:50}}>
         <Text style={{color:'white',fontSize:20}}>Next</Text>
       </Button>
     </Pressable>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     marginTop:10,
     borderWidth: 1,
     borderRadius:8,
-    borderColor:'#00BCD4',
+    borderColor:'#9633AA',
     backgroundColor:'white',
     padding: 10,
     
