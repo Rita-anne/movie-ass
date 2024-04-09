@@ -33,17 +33,17 @@ const Tab = createBottomTabNavigator();
 const MainNavigation=()=>{
   return(
     <Stack.Navigator>
-{/* <Stack.Screen name='Muvi' component={Muvi} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Joker' component={Joker} options={{headerShown:false}} /> */}
-{/* <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/> */}
-<Stack.Screen name='Beforegoingforward' component={Beforegoingforward} options={{headerShown:false}}/>
-<Stack.Screen name='Highesteducation' component={Highesteducation} options={{headerShown:false}}/>
-<Stack.Screen name='Save' component={Save} options={{headerShown:false}}/>
-<Stack.Screen name='Getstarted' component={Getstarted} options={{headerShown:false}}/>
+<Stack.Screen name='Muvi' component={Muvi} options={{headerShown:false}}/>
+<Stack.Screen name='Joker' component={Joker} options={{headerShown:false}} />
+<Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
+<Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
+<Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/>
+<Stack.Screen name='Src6' component={TabNavigation} options={{headerShown:false}}/>
+<Stack.Screen name='Action' component={Action} options={{headerShown:false}}/>
+{/* <Stack.Screen name='Beforegoingforward' component={Beforegoingforward} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Highesteducation' component={Highesteducation} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Save' component={Save} options={{headerShown:false}}/> */}
+{/* <Stack.Screen name='Getstarted' component={Getstarted} options={{headerShown:false}}/> */}
 
 </Stack.Navigator>
   )
